@@ -1,0 +1,193 @@
+.body {
+  height: 100vh;
+  background-color: background-color;
+}
+
+.artboard {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  height: 100%;
+  position: relative;
+}
+
+.artboard__side--front {
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.artboard__side--back {
+  transform: rotateY(0);
+}
+
+.artboard__details {
+  padding: 4rem 2rem;
+}
+
+.artboard__theme {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.artboard__theme-box {
+  color: #ffffff;
+  margin-bottom: 8rem;
+}
+
+.artboard__subject {
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 0.8rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.artboard__title {
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 100;
+}
+
+.artboard__cover {
+  position: relative;
+  background-size: cover;
+  height: 14rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.artboard__heading {
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+.artboard__heading-span {
+  font-family: "VT323", monospace;
+  font-size: 4.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+}
+
+.artboard__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.artboard__details li {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+.artboard__details li:not(:last-child) {
+  border-bottom: 1px solid color-gray-light;
+}
+
+@media only screen and (max-width: 37.5em), only screen and (hover: none) {
+  .artboard {
+    height: auto;
+    border-radius: 3px;
+    background-color: color-white;
+    box-shadow: 0 2rem 6rem rgba(color-black, 0.15);
+  }
+
+  .artboard__side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .artboard__theme {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 5rem 4rem 1.5rem 4rem;
+    text-align: right;
+  }
+
+  .artboard__theme-box {
+    margin-bottom: 1.5rem;
+  }
+
+  .artboard__title {
+    font-size: 4rem;
+  }
+
+  .artboard__details {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+
+
+.artboard__side--back {
+  transform: rotateY(0);
+  transition: transform 0.8s ease;
+}
+
+.artboard__side--front {
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  transition: clip-path 0.8s ease;
+}
+
+.artboard__side--front:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.artboard__side--back:hover {
+  transform: rotateY(180deg);
+}
+
+
+
+
+      
